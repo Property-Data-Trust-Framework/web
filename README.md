@@ -1,4 +1,4 @@
-# ![logo](https://propdata.org.uk/assets/orange-logo.png)Property Data Trust Framework
+# ![logo](/assets/orange-logo.png)Property Data Trust Framework
 
 (last updated Oct 2022)
 
