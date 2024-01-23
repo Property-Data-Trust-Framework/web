@@ -1,0 +1,22 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/PageFrame.astro'
+
+import ApiPageFrame from './ApiPageFrame.astro'
+const isApiPage = Astro.props.slug.startsWith('api') || Astro.props.slug.startsWith('schemas');
+
+
+---
+{
+  isApiPage ? (
+      <ApiPageFrame {...Astro.props}>
+          <slot name="header" slot="header"/>
+      </ApiPageFrame>
+  ) : (
+    <Default {...Astro.props}>
+        <slot name="header" slot="header"/>
+        <slot name="sidebar" slot="sidebar"/>
+        <slot />
+    </Default>
+  )
+}

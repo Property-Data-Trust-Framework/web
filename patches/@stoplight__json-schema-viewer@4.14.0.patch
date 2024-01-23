@@ -1,0 +1,48 @@
+diff --git a/.idea/d15956e394fbe3a0929a9c2173530569.iml b/.idea/d15956e394fbe3a0929a9c2173530569.iml
+new file mode 100644
+index 0000000000000000000000000000000000000000..0c8867d7e175f46d4bcd66698ac13f4ca00cf592
+--- /dev/null
++++ b/.idea/d15956e394fbe3a0929a9c2173530569.iml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..23f23bb501e249600a3cd489ddacfa159d26f9b7
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/d15956e394fbe3a0929a9c2173530569.iml" filepath="$PROJECT_DIR$/.idea/d15956e394fbe3a0929a9c2173530569.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/index.mjs b/index.mjs
+index 09e7d409984690c60537d80dc7514a5c039ea8a8..e438a7ff8778dd39350c18a57d705831e4c43e62 100644
+--- a/index.mjs
++++ b/index.mjs
+@@ -7,7 +7,8 @@ import { atomFamily, useUpdateAtom, useAtomValue } from 'jotai/utils';
+ import * as React from 'react';
+ import { useState, useEffect } from 'react';
+ import last from 'lodash/last.js';
+-import * as fnv from 'fnv-plus';
++//patch this because the import is messed up for some reason
++import fnv from 'fnv-plus';
+ import { MarkdownViewer } from '@stoplight/markdown-viewer';
+ import { getLastPathSegment, isPlainObject, extractPointerFromRef, pointerToPath } from '@stoplight/json';
+ import upperFirst from 'lodash/upperFirst.js';

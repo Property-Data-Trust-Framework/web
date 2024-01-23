@@ -1,0 +1,88 @@
+---
+import config from 'virtual:starlight/user-config';
+import type { Props } from '@astrojs/starlight/props';
+
+import LanguageSelect from '@astrojs/starlight/components/LanguageSelect.astro';
+import Search from '@astrojs/starlight/components/Search.astro';
+import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+
+
+const selectedTab = Astro.props.slug.startsWith('api') ? 'api' : Astro.props.slug.startsWith('guides') || Astro.props.slug.startsWith('reference')  ? 'guides' : Astro.props.slug.startsWith('schemas') ? 'schemas' : 'unknown';
+/**
+ * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
+ */
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="header sl-flex">
+	<div class="sl-flex items-center">
+		<SiteTitle {...Astro.props}/>
+		<a href="/reference/about" class=`text-md ml-4 md:ml-6 lg:ml-10 mr-3 lg:mr-4 no-underline hover:text-indigo-500 ${selectedTab === 'guides' ? 'font-bold text-indigo-600 dark:text-indigo-300' : 'text-zinc-500 dark:text-zinc-100'}`>Learn</a>
+		<a href="/api" class=`text-md no-underline mr-3 lg:mr-4 hover:text-indigo-500 ${selectedTab === 'api' ? 'font-bold text-indigo-600 dark:text-indigo-300' : 'text-zinc-500 dark:text-zinc-100'}`>API</a>
+		<a href="/schemas" class=`text-md no-underline hover:text-indigo-500 ${selectedTab === 'schemas' ? 'font-bold text-indigo-600 dark:text-indigo-300' : 'text-zinc-500 dark:text-zinc-100'}`>Schemas</a>
+	</div>
+	<div class="sl-flex">
+		{shouldRenderSearch && <Search {...Astro.props} />}
+	</div>
+	<div class="sl-hidden md:sl-flex right-group">
+		<div class="sl-flex social-icons">
+			<SocialIcons {...Astro.props} />
+		</div>
+		<ThemeSelect {...Astro.props} />
+		<LanguageSelect {...Astro.props} />
+	</div>
+</div>
+
+<style>
+	.header {
+		gap: var(--sl-nav-gap);
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	.right-group,
+	.social-icons {
+		gap: 1rem;
+		align-items: center;
+	}
+	.social-icons::after {
+		content: '';
+		height: 2rem;
+		border-inline-end: 1px solid var(--sl-color-gray-5);
+	}
+
+	@media (min-width: 50rem) {
+		:global(:root[data-has-sidebar]) {
+			--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+		}
+		:global(:root:not([data-has-toc])) {
+			--__toc-width: 0rem;
+		}
+		.header {
+			--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+			--__main-column-fr: calc(
+				(
+						100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+							(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+							var(--sl-content-width)
+					) / 2
+			);
+			display: grid;
+			grid-template-columns:
+        /* 1 (site title): runs up until the main content column’s left edge or the width of the title, whichever is the largest  */
+				minmax(
+					calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
+					auto
+				)
+				/* 2 (search box): all free space that is available. */
+				1fr
+				/* 3 (right items): use the space that these need. */
+				auto;
+			align-content: center;
+		}
+	}
+</style>
