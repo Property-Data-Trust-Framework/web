@@ -1,0 +1,20 @@
+openapi: 3.0.3
+info:
+  title: Schema Browser
+  version: 1.2.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  description: a wrapper to hold all the PDTF schemas for browsing
+components:
+  schemas:
+    transaction:
+      $ref: 'schemas/src/schemas/v1/pdtf-transaction.json'
+    baspi:
+      $ref: "schemas/src/schemas/v2/overlays/baspi.json"
+    con29DW:
+      $ref: "schemas/src/schemas/v2/overlays/con29DW.json"
+    con29R:
+      $ref: "schemas/src/schemas/v2/overlays/con29R.json"
+    fme1:
+      $ref: "schemas/src/schemas/v2/overlays/fme1.json"

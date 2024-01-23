@@ -1,0 +1,54 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import loader from "../assets/loader.svg?raw";
+import '../stoplight-styles-for-starlight.css';
+import {PdtfApi} from "./api.tsx";
+
+const selectedTab = Astro.props.slug.startsWith('api') ? 'api' : Astro.props.slug.startsWith('guides') || Astro.props.slug.startsWith('reference') ? 'guides' : Astro.props.slug.startsWith('schemas') ? 'schemas' : 'unknown';
+---
+
+<div class="page flex h-screen">
+    <header class="header flex-0"> <slot name="header" slot="header"/></header>
+
+    <div class={`mt-12 md:mt-16 pt-14 lg:overflow-hidden stoplight-content flex-1 px-4 lg:px-0 lg:py-0`}>
+        <div class='spinner animate-spin w-[24px] h-[24px] mx-auto mt-64'>
+            <Fragment set:html={loader} class="test"/>
+        </div>
+        {
+            selectedTab === 'api' ? (<PdtfApi client:only="react" apiDescriptionUrl="/api/pdtf-api-1.2.0.yaml"/>) : null
+        }
+        {
+            selectedTab === 'schemas' ? <PdtfApi client:only="react" apiDescriptionUrl="/schemas.yaml"/> : null
+        }
+    </div>
+</div>
+
+
+<style>
+  .sl-elements-api {
+    background-color: black;
+  }
+	.header {
+		z-index: var(--sl-z-index-navbar);
+		position: fixed;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		width: 100%;
+		height: var(--sl-nav-height);
+		border-bottom: 1px solid var(--sl-color-hairline-shade);
+		padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+		padding-inline-end: var(--sl-nav-pad-x);
+		background-color: var(--sl-color-bg-nav);
+	}
+
+	:global([data-has-sidebar]) .header {
+		padding-inline-end: calc(var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size));
+	}
+
+
+	@media (min-width: 50rem) {
+		:global([data-has-sidebar]) .header {
+			padding-inline-end: var(--sl-nav-pad-x);
+		}
+	}
+</style>

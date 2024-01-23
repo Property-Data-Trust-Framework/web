@@ -1,0 +1,31 @@
+---
+title: Property Data Trust Framework
+description: build with the property data trust framework
+template: splash
+hero:
+  tagline: Welcome to the Property Data Trust Framework. Here you can learn about the framework, and how to use it.
+  image:
+    file: ../../assets/stakeholders-transparent.png
+  actions:
+    - text: Learn
+      link: /reference/about/
+      icon: right-arrow
+      variant: primary
+    - text: API Reference
+      link: /api
+      icon: rocket
+      variant: secondary
+---
+
+import {Card, CardGrid, LinkCard} from '@astrojs/starlight/components';
+
+## Resources
+
+<CardGrid stagger>
+    <Card title="Schemas" icon="open-book">
+        Browse [PDTF Schemas](/schemas).
+    </Card>
+    <Card title="Open Property Data Association" icon="external">
+        Learn more about the [open property data association](https://openpropdata.org.uk/).
+    </Card>
+</CardGrid>
