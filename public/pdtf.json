@@ -1,0 +1,10 @@
+{
+  "id": "bac68005-b2a2-422d-8af7-4de44796d72f",
+  "author": "did:key:z6Mko9SLc7mLnZDvtnJTwaZAG9LuNB6CEfHv6v1nAfebdBJ1",
+  "version": "1",
+  "created": "2024-01-25T16:03:12.759Z",
+  "validFrom": "2024-01-25T16:03:12.759Z",
+  "entries": {
+    "http://localhost:4321/topics/pdtf-participant.json": {}
+  }
+}

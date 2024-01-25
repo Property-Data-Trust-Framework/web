@@ -1,0 +1,10 @@
+{
+  "id": "abf60301-cfe9-4301-bbfd-f24376d00323",
+  "author": "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj",
+  "version": "1",
+  "created": "2024-01-25T15:52:55.155Z",
+  "validFrom": "2024-01-25T15:52:55.155Z",
+  "entries": {
+    "https://propdata.org.uk/topics/pdtf-participant.json": {}
+  }
+}
