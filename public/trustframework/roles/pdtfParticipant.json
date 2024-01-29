@@ -1,5 +1,5 @@
 {
-  "$id": "https://propdata.org.uk/topics/pdtf-participant.json",
+  "$id": "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Member of PDTF",
   "type": "object",

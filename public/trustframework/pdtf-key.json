@@ -1,0 +1,4 @@
+{
+  "credentialsTopic": "https://propdata.org.uk/trustframework/pdtfCredentials.json",
+  "memberTopic": "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json"
+}
