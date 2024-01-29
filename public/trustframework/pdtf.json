@@ -1,8 +1,20 @@
 {
   "id": "efa99b1e-5e41-4554-be89-f3b50630832b",
   "author": "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj",
-  "version": "1",
-  "created": "2024-01-29T16:38:51.338Z",
-  "validFrom": "2024-01-29T16:38:51.338Z",
-  "entries": {}
+  "version": "5",
+  "created": "2024-01-29T20:41:45.419Z",
+  "validFrom": "2024-01-29T20:41:45.419Z",
+  "entries": {
+    "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json": {},
+    "https://propdata.org.uk/trustframework/pdtfCredentials.json": {
+      "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj": {
+        "credentials": [
+          {
+            "type": "ExampleCredential",
+            "schema": "https://propdata.org.uk/trustframework/schemas/example.json"
+          }
+        ]
+      }
+    }
+  }
 }
