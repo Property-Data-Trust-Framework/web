@@ -1,6 +1,7 @@
 {
-  "self": "https://propdata.org.uk/trustframework/index.json",
   "entryPoint": "https://propdata.org.uk/trustframework/pdtf.json",
+  "self": "https://propdata.org.uk/trustframework/index.json",
   "credentialsTopic": "https://propdata.org.uk/trustframework/pdtfCredentials.json",
-  "memberTopic": "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json"
+  "memberTopic": "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json",
+  "api": "https://propdata.org.uk/trustframework/api"
 }

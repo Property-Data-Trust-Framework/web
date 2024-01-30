@@ -1,11 +1,10 @@
 {
-  "id": "efa99b1e-5e41-4554-be89-f3b50630832b",
+  "id": "0b813cc1-4f81-434d-b346-b87b71608cd7",
   "author": "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj",
-  "version": "5",
-  "created": "2024-01-29T20:41:45.419Z",
-  "validFrom": "2024-01-29T20:41:45.419Z",
+  "version": "1",
+  "created": "2024-01-30T14:38:09.531Z",
+  "validFrom": "2024-01-30T14:38:09.531Z",
   "entries": {
-    "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json": {},
     "https://propdata.org.uk/trustframework/pdtfCredentials.json": {
       "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj": {
         "credentials": [
@@ -14,6 +13,12 @@
             "schema": "https://propdata.org.uk/trustframework/schemas/example.json"
           }
         ]
+      }
+    },
+    "https://propdata.org.uk/trustframework/roles/pdtfParticipant.json": {
+      "did:key:z6MksN2Er8W43KG8KJmPZBm1bvCzD7r5n41fb1hriEnmB9gi": {
+        "name": "Property Prepper",
+        "description": "Example member"
       }
     }
   }

@@ -1,0 +1,6 @@
+{
+  "tfCredentialSchema": {
+    "type": "ExampleCredential",
+    "schema": "https://propdata.org.uk/trustframework/schemas/example.json"
+  }
+}
