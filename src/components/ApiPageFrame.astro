@@ -1,7 +1,6 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
 import loader from "../assets/loader.svg?raw";
-import '../stoplight-styles-for-starlight.css';
 import {PdtfApi} from "./api.tsx";
 
 const selectedTab = Astro.props.slug.startsWith('api') ? 'api' : Astro.props.slug.startsWith('guides') || Astro.props.slug.startsWith('reference') ? 'guides' : Astro.props.slug.startsWith('schemas') ? 'schemas' : 'unknown';

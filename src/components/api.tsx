@@ -5,6 +5,8 @@ import { API } from '@stoplight/elements';
 import {TryIt, withMosaicProvider, withStyles} from '@stoplight/elements-core';
 import {JsonSchemaViewer} from '@stoplight/json-schema-viewer'
 import useBreakpoint from '../lib/useBreakpoints.ts'
+import '../stoplight-styles-for-starlight.css';
+
 export function PdtfApi({ layout = 'sidebar', currentVersion = 'v1', apiDescriptionUrl = "/api/pdtf-api-1.2.0.yaml" }) {
   const size = useBreakpoint();
   //hacks to hide spinner once loaded
