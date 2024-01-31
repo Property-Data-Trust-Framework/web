@@ -1,0 +1,14 @@
+{
+  "did": "did:key:z6Mktw5UQ26FHmyJWKjjaoLEcDpvbeyx67wzuwbafsqYN8cL",
+  "member": {
+    "name": "Example Verifier",
+    "description": "Example Verifier"
+  },
+  "verifier": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "did": "did:key:z6Mkn2ZyTjHJSCBC8y2DAJ4HYGK9es4K7eWvzL9bj3qErGuS",
+  "member": {
+    "name": "Example Issuer",
+    "description": "Example issuer"
+  },
+  "issuer": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  }
+}

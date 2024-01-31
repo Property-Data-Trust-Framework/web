@@ -1,0 +1,21 @@
+{
+  "did": "did:key:z6Mkt254rXxhKanMTiEGiNhrdsoTiV8TFw4aj6bkC9FSMAku",
+  "member": {
+    "name": "Example Issuer & Verifier",
+    "description": "Example issuer & verifier"
+  },
+  "issuer": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  },
+  "verifier": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  }
+}

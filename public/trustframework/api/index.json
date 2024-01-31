@@ -1,10 +1,52 @@
 {
   "members": {
-    "did:key:z6MksN2Er8W43KG8KJmPZBm1bvCzD7r5n41fb1hriEnmB9gi": {
-      "did": "did:key:z6MksN2Er8W43KG8KJmPZBm1bvCzD7r5n41fb1hriEnmB9gi",
+    "did:key:z6Mkt254rXxhKanMTiEGiNhrdsoTiV8TFw4aj6bkC9FSMAku": {
+      "did": "did:key:z6Mkt254rXxhKanMTiEGiNhrdsoTiV8TFw4aj6bkC9FSMAku",
       "member": {
-        "name": "Property Prepper",
-        "description": "Example member"
+        "name": "Example Issuer & Verifier",
+        "description": "Example issuer & verifier"
+      },
+      "issuer": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
+      },
+      "verifier": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
+      }
+    },
+    "did:key:z6Mkn2ZyTjHJSCBC8y2DAJ4HYGK9es4K7eWvzL9bj3qErGuS": {
+      "did": "did:key:z6Mkn2ZyTjHJSCBC8y2DAJ4HYGK9es4K7eWvzL9bj3qErGuS",
+      "member": {
+        "name": "Example Issuer",
+        "description": "Example issuer"
+      },
+      "issuer": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
+      }
+    },
+    "did:key:z6Mktw5UQ26FHmyJWKjjaoLEcDpvbeyx67wzuwbafsqYN8cL": {
+      "did": "did:key:z6Mktw5UQ26FHmyJWKjjaoLEcDpvbeyx67wzuwbafsqYN8cL",
+      "member": {
+        "name": "Example Verifier",
+        "description": "Example Verifier"
+      },
+      "verifier": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
       }
     }
   },
@@ -13,7 +55,23 @@
       "tfCredentialSchema": {
         "type": "ExampleCredential",
         "schema": "https://propdata.org.uk/trustframework/schemas/example.json"
-      }
+      },
+      "issuers": [
+        {
+          "did": "did:key:z6Mkt254rXxhKanMTiEGiNhrdsoTiV8TFw4aj6bkC9FSMAku"
+        },
+        {
+          "did": "did:key:z6Mkn2ZyTjHJSCBC8y2DAJ4HYGK9es4K7eWvzL9bj3qErGuS"
+        }
+      ],
+      "verifiers": [
+        {
+          "did": "did:key:z6Mkt254rXxhKanMTiEGiNhrdsoTiV8TFw4aj6bkC9FSMAku"
+        },
+        {
+          "did": "did:key:z6Mktw5UQ26FHmyJWKjjaoLEcDpvbeyx67wzuwbafsqYN8cL"
+        }
+      ]
     }
   }
 }
