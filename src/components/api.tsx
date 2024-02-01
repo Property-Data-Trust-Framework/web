@@ -7,7 +7,7 @@ import {JsonSchemaViewer} from '@stoplight/json-schema-viewer'
 import useBreakpoint from '../lib/useBreakpoints.ts'
 import '../stoplight-styles-for-starlight.css';
 
-export function PdtfApi({ layout = 'sidebar', currentVersion = 'v1', apiDescriptionUrl = "/api/pdtf-api-1.2.0.yaml" }) {
+export function PdtfApi({ layout = 'sidebar', currentVersion = 'v1', apiDescriptionUrl = "/api/pdtf-api-1.3.0.yaml" }) {
   const size = useBreakpoint();
   //hacks to hide spinner once loaded
   //astro doesn't seem to have a nicer way to display a spinner / do suspense stuff
