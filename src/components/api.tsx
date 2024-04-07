@@ -16,6 +16,7 @@ export function PdtfApi({ layout = 'sidebar', currentVersion = 'v1', apiDescript
 
    return  (
         <API
+
             apiDescriptionUrl={apiDescriptionUrl}//this works because this file is is in our public dir. importing directly is awkward cus this component runs client side only
             router='hash'
             layout={size === 'sm' ? 'stacked' : 'sidebar'}

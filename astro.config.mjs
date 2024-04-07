@@ -9,7 +9,10 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
     markdown: {
-        syntaxHighlight: 'prism'
+        syntaxHighlight: 'prism',
+        prism: {
+            theme: 'prism-react-renderer/themes/nightOwl'
+        }
     },
     vite: {
         assetsInclude: ["**/*.yaml"],
@@ -23,7 +26,8 @@ export default defineConfig({
                 global: true,
                 process: true
             }
-        }), prismjsPlugin({
+        }),
+        prismjsPlugin({
             languages: "all"
         }) //todo narrow this down
         ],
