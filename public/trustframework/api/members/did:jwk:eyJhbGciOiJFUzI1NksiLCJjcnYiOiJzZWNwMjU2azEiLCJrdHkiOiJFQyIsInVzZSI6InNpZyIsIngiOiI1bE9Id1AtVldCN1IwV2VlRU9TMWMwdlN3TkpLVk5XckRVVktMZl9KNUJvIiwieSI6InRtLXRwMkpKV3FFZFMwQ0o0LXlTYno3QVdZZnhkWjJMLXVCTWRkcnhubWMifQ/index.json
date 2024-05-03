@@ -1,0 +1,21 @@
+{
+  "did": "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiI1bE9Id1AtVldCN1IwV2VlRU9TMWMwdlN3TkpLVk5XckRVVktMZl9KNUJvIiwieSI6InRtLXRwMkpKV3FFZFMwQ0o0LXlTYno3QVdZZnhkWjJMLXVCTWRkcnhubWMifQ",
+  "member": {
+    "name": "Kotini",
+    "description": "Kotini consumer-facing PDTF data and orchestration platform"
+  },
+  "issuer": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  },
+  "verifier": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  }
+}
