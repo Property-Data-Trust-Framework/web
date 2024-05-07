@@ -1,0 +1,21 @@
+{
+  "did": "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiJFRDRLZlYxemZ6Sllfb1Bmb2JCODl5R24xWEZQN2JoWHNUZGpHVFFDR0NNIiwieSI6IkJtMlYwbkxmYWYzbEgxcFhJZGtrY0k1T2s1WHdaeHJydGkzR3NibVZ6ancifQ",
+  "member": {
+    "name": "Moverly",
+    "description": "Moverly consumer-facing PDTF data and orchestration platform"
+  },
+  "issuer": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  },
+  "verifier": {
+    "credentials": [
+      {
+        "type": "ExampleCredential"
+      }
+    ]
+  }
+}

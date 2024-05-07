@@ -1,9 +1,9 @@
 {
-  "id": "f4413f7f-92ea-4756-b7b2-551922d4d609",
+  "id": "17f975d7-4fed-4cdc-8f14-1db10c8460a1",
   "author": "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj",
   "version": "1",
-  "created": "2024-01-31T15:06:02.786Z",
-  "validFrom": "2024-01-31T15:06:02.786Z",
+  "created": "2024-05-03T12:50:04.386Z",
+  "validFrom": "2024-05-03T12:50:04.386Z",
   "entries": {
     "https://propdata.org.uk/trustframework/pdtfCredentials.json": {
       "did:key:z6MkjAsm9PCHAqAbydELxV9HWYSY8qMambF8yF9wCf2hFASj": {
@@ -27,6 +27,14 @@
       "did:key:z6Mktw5UQ26FHmyJWKjjaoLEcDpvbeyx67wzuwbafsqYN8cL": {
         "name": "Example Verifier",
         "description": "Example Verifier"
+      },
+      "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiI1bE9Id1AtVldCN1IwV2VlRU9TMWMwdlN3TkpLVk5XckRVVktMZl9KNUJvIiwieSI6InRtLXRwMkpKV3FFZFMwQ0o0LXlTYno3QVdZZnhkWjJMLXVCTWRkcnhubWMifQ": {
+        "name": "Kotini",
+        "description": "Kotini consumer-facing PDTF data and orchestration platform"
+      },
+      "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiJFRDRLZlYxemZ6Sllfb1Bmb2JCODl5R24xWEZQN2JoWHNUZGpHVFFDR0NNIiwieSI6IkJtMlYwbkxmYWYzbEgxcFhJZGtrY0k1T2s1WHdaeHJydGkzR3NibVZ6ancifQ": {
+        "name": "Moverly",
+        "description": "Moverly consumer-facing PDTF data and orchestration platform"
       }
     },
     "https://propdata.org.uk/trustframework/roles/pdtfIssuer.json": {
@@ -43,6 +51,20 @@
             "type": "ExampleCredential"
           }
         ]
+      },
+      "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiI1bE9Id1AtVldCN1IwV2VlRU9TMWMwdlN3TkpLVk5XckRVVktMZl9KNUJvIiwieSI6InRtLXRwMkpKV3FFZFMwQ0o0LXlTYno3QVdZZnhkWjJMLXVCTWRkcnhubWMifQ": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
+      },
+      "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiJFRDRLZlYxemZ6Sllfb1Bmb2JCODl5R24xWEZQN2JoWHNUZGpHVFFDR0NNIiwieSI6IkJtMlYwbkxmYWYzbEgxcFhJZGtrY0k1T2s1WHdaeHJydGkzR3NibVZ6ancifQ": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
       }
     },
     "https://propdata.org.uk/trustframework/roles/pdtfVerifier.json": {
@@ -54,6 +76,20 @@
         ]
       },
       "did:key:z6Mktw5UQ26FHmyJWKjjaoLEcDpvbeyx67wzuwbafsqYN8cL": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
+      },
+      "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiI1bE9Id1AtVldCN1IwV2VlRU9TMWMwdlN3TkpLVk5XckRVVktMZl9KNUJvIiwieSI6InRtLXRwMkpKV3FFZFMwQ0o0LXlTYno3QVdZZnhkWjJMLXVCTWRkcnhubWMifQ": {
+        "credentials": [
+          {
+            "type": "ExampleCredential"
+          }
+        ]
+      },
+      "did:jwk:eyJhbGciOiJFUzI1NksiLCJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsIngiOiJFRDRLZlYxemZ6Sllfb1Bmb2JCODl5R24xWEZQN2JoWHNUZGpHVFFDR0NNIiwieSI6IkJtMlYwbkxmYWYzbEgxcFhJZGtrY0k1T2s1WHdaeHJydGkzR3NibVZ6ancifQ": {
         "credentials": [
           {
             "type": "ExampleCredential"
