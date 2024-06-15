@@ -1,0 +1,9 @@
+---
+import loader from "../assets/loader.svg?raw";
+import {ResponsiveApi} from "./api.tsx";
+---
+
+<div class='spinner animate-spin w-[24px] h-[24px] mx-auto mt-64'>
+    <Fragment set:html={loader} class="test"/>
+</div>
+<ResponsiveApi client:only="react" apiDescriptionUrl={Astro.props.apiDescriptionUrl}/>

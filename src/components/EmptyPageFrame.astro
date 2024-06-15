@@ -1,0 +1,34 @@
+<div class="page flex h-screen">
+    <header class="header flex-0"> <slot name="header" slot="header"/></header>
+
+    <div class={`mt-12 md:mt-16 pt-14 lg:overflow-hidden stoplight-content flex-1 px-4 lg:px-0 lg:py-0 not-content`} data-theme="light">
+        <slot/>
+    </div>
+</div>
+
+
+<style>
+	.header {
+		z-index: var(--sl-z-index-navbar);
+		position: fixed;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		width: 100%;
+		height: var(--sl-nav-height);
+		border-bottom: 1px solid var(--sl-color-hairline-shade);
+		padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+		padding-inline-end: var(--sl-nav-pad-x);
+		background-color: var(--sl-color-bg-nav);
+	}
+
+	:global([data-has-sidebar]) .header {
+		padding-inline-end: calc(var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size));
+	}
+
+
+	@media (min-width: 50rem) {
+		:global([data-has-sidebar]) .header {
+			padding-inline-end: var(--sl-nav-pad-x);
+		}
+	}
+</style>

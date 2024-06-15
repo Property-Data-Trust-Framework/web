@@ -1,18 +1,31 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/PageFrame.astro'
-import ApiPageFrame from './ApiPageFrame.astro'
-const isApiPage = Astro.props.slug.startsWith('api') || Astro.props.slug.startsWith('schemas');
+import EmptyPageFrame from './EmptyPageFrame.astro'
+import CustomHeader from './CustomHeader.astro'
+import ApiLoader from './ApiLoader.astro'
+
+const selectedTab = Astro.props.slug.startsWith('api') ? 'api'
+    : Astro.props.slug.startsWith('schemas') ? 'schemas'
+    : Astro.props.slug.startsWith('reference') ? 'guides'
+    : undefined
 
 ---
 {
-  isApiPage ? (
-      <ApiPageFrame {...Astro.props}>
-          <slot name="header" slot="header"/>
-      </ApiPageFrame>
+  selectedTab === 'api' ? (
+      <EmptyPageFrame>
+          <CustomHeader slot="header" selectedTab={selectedTab} {...Astro.props}/>
+          <ApiLoader apiDescriptionUrl="/api/pdtf-api-1.3.0.yaml"/>
+      </EmptyPageFrame>
+  )
+  : selectedTab === 'schemas' ? (
+    <EmptyPageFrame>
+        <CustomHeader slot="header" selectedTab={selectedTab} {...Astro.props}/>
+        <ApiLoader apiDescriptionUrl="/schemas.yaml"/>
+    </EmptyPageFrame>
   ) : (
-    <Default {...Astro.props}>
-        <slot name="header" slot="header"/>
+    <Default {...Astro.props} selectedTab={selectedTab}>
+        <CustomHeader slot="header" selectedTab={selectedTab} {...Astro.props}/>
         <slot name="sidebar" slot="sidebar"/>
         <slot />
     </Default>
