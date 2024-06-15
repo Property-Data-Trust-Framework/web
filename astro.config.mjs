@@ -18,7 +18,7 @@ export default defineConfig({
         assetsInclude: ["**/*.yaml"],
         plugins: [nodePolyfills({
             // To add only specific polyfills, add them here. If no option is passed, adds all polyfills
-            include: ['path', 'process', 'Buffer'],
+            include: ['process', 'Buffer'],
             // Whether to polyfill specific globals.
             globals: {
                 Buffer: true,
@@ -38,11 +38,13 @@ export default defineConfig({
         }
     },
     integrations: [starlight({
+
         favicon: '/favicon.png',
         components: {
             // Override the default `SocialIcons` component.
             PageFrame: './src/components/CustomPageFrame.astro',
-            Header: './src/components/CustomHeader.astro'
+            Header: './src/components/CustomHeader.astro',
+            ThemeProvider: './src/components/ThemeProvider.astro',
         },
         logo: {
             light: './src/assets/opda_logo.png',
@@ -70,17 +72,11 @@ export default defineConfig({
                 autogenerate: {
                     directory: 'guides'
                 }
-            },
-
-            // , {
-            //   label: 'Api',
-            //   link: '/api'
-            // }, {
-            //   label: 'Schemas',
-            //   link: '/schemas'
-            // }
+            }
         ]
-    }), react(), tailwind({      // Disable the default base styles:
+    }),
+    react(),
+    tailwind({      // Disable the default base styles:
         applyBaseStyles: false
     })]
 });

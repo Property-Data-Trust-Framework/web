@@ -1,0 +1,31 @@
+---
+import {PdtfApi} from '../components/api-test'
+import loader from '../assets/loader.svg?raw'
+import '../tailwind.css';
+import type { Props } from '@astrojs/starlight/props';
+import PageFrame from '@astrojs/starlight/components/PageFrame.astro';
+import Header from '@astrojs/starlight/components/Header.astro';
+import CustomHeader from '../components/CustomHeader.astro'
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+---
+<!--<PageFrame frontmatter={{ title: 'My custom page' }} {...await generateStarlightPageRouteData({ props: Astro.props, url: Astro.url })}>-->
+<!--        &lt;!&ndash;<CustomHeader slot="header" slug={"api"}/>&ndash;&gt;-->
+<!--        <p>hmm</p>-->
+<!--</PageFrame>-->
+<!--<p>hmm</p>-->
+
+<StarlightPage frontmatter={{ title: 'My custom page' }} isCustom={true}>
+    <p slot="test">what</p>
+</StarlightPage>
+
+<!--<div class="page flex h-screen">-->
+<!--    &lt;!&ndash;<header class="header flex-0"> <slot name="header" slot="header"/></header>&ndash;&gt;-->
+<!--    <div class={`mt-12 md:mt-16 pt-14 lg:overflow-hidden stoplight-content flex-1 px-4 lg:px-0 lg:py-0`}>-->
+<!--        <div class='spinner animate-spin w-[24px] h-[24px] mx-auto mt-64'>-->
+<!--            <Fragment set:html={loader}/>-->
+<!--        </div>-->
+
+<!--       <PdtfApi client:only="react" apiDescriptionUrl="/api/pdtf-api-1.3.0.yaml"/>-->
+<!--    </div>-->
+<!--</div>-->

@@ -1,3 +1,5 @@
+/*this is a theme for stoplight that should helps it fit in with the theme of rest of the (starlight) site*/
+
 :root,
 [data-theme="light"],
 [data-theme="light"] .sl-inverted .sl-inverted,
@@ -28,7 +30,7 @@
     --color-canvas-pure: hsla(218, 40%, 100%, 1);
     --color-canvas-tint: hsla(218, 32%, 97%, 0.5);
     --color-canvas-50: hsla(218, 32%, 97%, 1);
-    --color-canvas-100: var(--sl-color-gray-7);
+    --color-canvas-100: hsl(224, 19%, 97%); /*override*/
     --color-canvas-200: hsla(218, 35%, 91%, 1);
     --color-canvas-300: hsla(218, 36%, 88%, 1);
     --color-canvas-400: hsla(218, 37%, 85%, 1);
@@ -193,7 +195,7 @@
     --color-canvas-pure: hsla(218, 32%, 5%, 1);
     --color-canvas-tint: hsla(218, 26%, 30%, 0.2);
     --color-canvas-50: hsla(218, 26%, 20%, 1);
-    --color-canvas-100: var(--sl-color-gray-6);
+    --color-canvas-100: hsl(224, 20%, 94%); /*override*/
     --color-canvas-200: hsla(218, 28%, 10%, 1);
     --color-canvas-300: hsla(218, 29%, 8%, 1);
     --color-canvas-400: hsla(218, 30%, 7%, 1);
@@ -276,7 +278,7 @@
     --color-canvas-pure: hsla(218, 32%, 10%, 1);
     --color-canvas-tint: hsla(218, 26%, 35%, 0.2);
     --color-canvas-50: hsla(218, 26%, 23%, 1);
-    --color-canvas-100: var(--sl-color-gray-6);
+    --color-canvas-100:  hsl(224, 14%, 16%); /*override*/
     --color-canvas-200: hsla(218, 28%, 14%, 1);
     --color-canvas-300: hsla(218, 29%, 11%, 1);
     --color-canvas-400: hsla(218, 30%, 10%, 1);
